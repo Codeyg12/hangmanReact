@@ -149,3 +149,17 @@
   rotate: -60deg;
   transform-origin: right bottom;
 }
+
+.wordDisplay {
+  display: flex;
+  gap: .25em;
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* Set star wars font */
+  font-family: monospace;
+}
+
+.wordSpace {
+  border-bottom: .1em solid black;
+}
