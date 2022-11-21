@@ -22,15 +22,12 @@ const RIGHT_LEG = (
   <div className="right-leg" />
 )
 
-export function HangmanDrawing() {
+const PERSON = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
+
+export function HangmanDrawing({ totalGuesses }) {
   return (
     <div className="hangPost">
-      {HEAD}
-      {BODY}
-      {RIGHT_ARM}
-      {LEFT_ARM}
-      {RIGHT_LEG}
-      {LEFT_LEG}
+      {PERSON.slice(0, totalGuesses)}
       <div className="rope"></div>
       <div className="barTop"></div>
       <div className="barSupport"></div>

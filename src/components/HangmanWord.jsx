@@ -1,11 +1,7 @@
-export function HangmanWord() {
-  const guessedLettters = [];
-
-  const word = 'codey'
-
+export function HangmanWord({ guessedLettters, wordToGuess }) {
   return (
     <div className="wordDisplay">
-      {word.split("").map((letter, i) => (
+      {wordToGuess.split("").map((letter, i) => (
         <span className="wordSpace" key={i}>
           <span
             style={{
