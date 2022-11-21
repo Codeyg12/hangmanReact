@@ -1,8 +1,24 @@
 import { useState } from "react";
+import words from './words.json'
+import './App.css'
+import { HangmanDrawing } from './components/HangmanDrawing';
+import { HangmanWord } from './components/HangmanWord';
+import { Keyboard } from './components/Keyboard'
 
 function App() {
-  const [wordToGuess, setWordToGuess] = useState("Test")
-  return <h1>Hi</h1>;
+  const random = words[Math.floor(Math.random() * words.length)]
+  const [wordToGuess, setWordToGuess] = useState(random)
+
+  const [guessedLettters, setGuessedLetters] = useState([])
+
+  return (
+    <div className="main">
+      <div className="status">Lose Win</div>
+      <HangmanDrawing />
+      <HangmanWord />
+      <Keyboard />
+    </div>
+  )
 }
 
 export default App;
