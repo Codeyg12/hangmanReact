@@ -27,7 +27,7 @@ const KEYS = [
     'z'
 ]
 
-export function Keyboard({ activeLetters, inactiveLetters, addGuessedLetter }) {
+export function Keyboard({ activeLetters, inactiveLetters, addGuessedLetter, disabled=false }) {
     return (
         <div class='keyboard'>
             {KEYS.map(key => {

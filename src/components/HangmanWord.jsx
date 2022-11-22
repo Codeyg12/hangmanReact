@@ -1,4 +1,4 @@
-export function HangmanWord({ guessedLettters, wordToGuess }) {
+export function HangmanWord({ guessedLettters, wordToGuess, reveal=false }) {
   return (
     <div className="wordDisplay">
       {wordToGuess.split("").map((letter, i) => (
@@ -8,6 +8,7 @@ export function HangmanWord({ guessedLettters, wordToGuess }) {
               visibility: guessedLettters.includes(letter)
                 ? "visible"
                 : "hidden",
+                color: !guessedLettters.includes(letter) && reveal ? 'red' : 'black'
             }}
           >
             {letter}
