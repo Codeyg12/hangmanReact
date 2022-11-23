@@ -5,10 +5,12 @@ export function HangmanWord({ guessedLettters, wordToGuess, reveal = false }) {
         <span className="wordSpace" key={i}>
           <span
             style={{
-              visibility: guessedLettters.includes(letter) || reveal
-                ? "visible"
-                : "hidden",
-                color: !guessedLettters.includes(letter) && reveal ? 'red' : 'black'
+              visibility:
+                guessedLettters.includes(letter) || reveal
+                  ? "visible"
+                  : "hidden",
+              color:
+                !guessedLettters.includes(letter) && reveal ? "red" : "black",
             }}
           >
             {letter}
