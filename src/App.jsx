@@ -10,6 +10,11 @@ const getWord = () => {
 };
 
 function App() {
+
+  useEffect(() => {
+    document.title = 'Star Wars Hangman'
+  }, [])
+
   const [wordToGuess, setWordToGuess] = useState(getWord);
 
   const [guessedLettters, setGuessedLetters] = useState([]);
