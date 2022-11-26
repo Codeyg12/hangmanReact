@@ -1,0 +1,289 @@
+.main {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.status {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.hangPost {
+  position: relative;
+}
+
+.rope {
+  height: 50px;
+  width: 10px;
+  background: black;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.barTop {
+  height: 10px;
+  width: 20 0px;
+  background: black;
+  margin-left: 120px;
+}
+
+.barSupport {
+  height: 400px;
+  width: 10px;
+  background: black;
+  margin-left: 120px;
+}
+
+.barBase {
+  height: 10px;
+  width: 250px;
+  background: black;
+}
+
+.head {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  border: 10px solid black;
+  position: absolute;
+  top: 50px;
+  right: -30px;
+}
+
+.body {
+  height: 100px;
+  width: 10px;
+  background: black;
+  position: absolute;
+  top: 120px;
+  right: 0;
+}
+
+.right-arm {
+  height: 10px;
+  width: 100px;
+  background: black;
+  position: absolute;
+  top: 150px;
+  right: -100px;
+  rotate: 30deg;
+  transform-origin: left top;
+}
+
+.left-arm {
+  height: 10px;
+  width: 100px;
+  background: black;
+  position: absolute;
+  top: 150px;
+  right: 10px;
+  rotate: -30deg;
+  transform-origin: right top;
+}
+
+.right-leg {
+  height: 10px;
+  width: 100px;
+  background: black;
+  position: absolute;
+  top: 210px;
+  right: -90px;
+  rotate: 60deg;
+  transform-origin: left bottom;
+}
+
+.left-leg {
+  height: 10px;
+  width: 100px;
+  background: black;
+  position: absolute;
+  top: 210px;
+  right: 0;
+  rotate: -60deg;
+  transform-origin: right bottom;
+}
+
+.wordDisplay {
+  display: flex;
+  gap: .25em;
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* Set star wars font */
+  font-family: monospace;
+}
+
+.wordSpace {
+  border-bottom: .1em solid black;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+  gap: .5rem;
+}
+
+.btn {
+  width: 100%;
+  border: 3px solid black;
+  background: none;
+  aspect-ratio: 1 / 1;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: .5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+.btn.active {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+}
+
+.btn.inactive {
+  opacity: .3;
+}
+
+.btn:hover:not(:disabled),
+.btn.focus:not(:disabled) {
+  background-color: hsl(200, 100%, 75%);
+}
+
+@media (max-width: 45em) {
+  .hangPost {
+    position: relative;
+    margin: 5% auto;
+  }
+  
+  .rope {
+    height: 25px;
+    width: 5px;
+    background: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .barTop {
+    height: 5px;
+    width: 100px;
+    background: black;
+    margin-left: 60px;
+  }
+  
+  .barSupport {
+    height: 200px;
+    width: 5px;
+    background: black;
+    margin-left: 60px;
+  }
+  
+  .barBase {
+    height: 5px;
+    width: 125px;
+    background: black;
+  }
+
+  .head {
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    border: 5px solid black;
+    position: absolute;
+    top: 25px;
+    right: -15px;
+  }
+  
+  .body {
+    height: 50px;
+    width: 5px;
+    background: black;
+    position: absolute;
+    top: 60px;
+    right: 0;
+  }
+  
+  .right-arm {
+    height: 5px;
+    width: 50px;
+    background: black;
+    position: absolute;
+    top: 75px;
+    right: -50px;
+    rotate: 15deg;
+    transform-origin: left top;
+  }
+  
+  .left-arm {
+    height: 5px;
+    width: 50px;
+    background: black;
+    position: absolute;
+    top: 75px;
+    right: 5px;
+    rotate: -15deg;
+    transform-origin: right top;
+  }
+  
+  .right-leg {
+    height: 5px;
+    width: 50px;
+    background: black;
+    position: absolute;
+    top: 105px;
+    right: -45px;
+    rotate: 30deg;
+    transform-origin: left bottom;
+  }
+  
+  .left-leg {
+    height: 5px;
+    width: 50px;
+    background: black;
+    position: absolute;
+    top: 105px;
+    right: 0;
+    rotate: -30deg;
+    transform-origin: right bottom;
+  }
+
+  .wordDisplay {
+    display: flex;
+    gap: .25em;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Set star wars font */
+    font-family: monospace;
+    margin: 10% auto;
+  }
+  
+  .wordSpace {
+    border-bottom: .1em solid black;
+  }
+
+  .keyboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: .25rem;
+    margin: 10% auto;
+  }
+
+  .longWord {
+    display: flex;
+    gap: .25em;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Set star wars font */
+    font-family: monospace;
+    margin: 10% auto;
+  }
+  
+}
