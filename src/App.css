@@ -270,9 +270,22 @@
 
   .keyboard {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
     gap: .25rem;
     margin: 10% auto;
+  }
+
+  .btn {
+    width: 100%;
+    border: 3px solid black;
+    background: none;
+    aspect-ratio: 1 / 1;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: .3rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
   }
 
   .longWord {
