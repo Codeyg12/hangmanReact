@@ -155,7 +155,7 @@
   background-color: hsl(200, 100%, 75%);
 }
 
-@media (max-width: 60em) {
+@media (max-width: 500px) {
   .hangPost {
     position: relative;
     margin: 5% auto;
