@@ -1,6 +1,7 @@
 export function HangmanWord({ guessedLettters, wordToGuess, reveal = false }) {
+  console.log(wordToGuess)
   return (
-    <div className="wordDisplay">
+    <div className={wordToGuess.length > 8 ? "longWord" : "wordDisplay"}>
       {wordToGuess.split("").map((letter, i) => (
         <span className="wordSpace" key={i}>
           <span
